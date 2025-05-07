@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "FreshMango";
+  src: url("/FreshMango.woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+.gradient-animation {
+  position: absolute;
+  width: 80vw;
+  height: 200px;
+
+  background: linear-gradient(to right, #13e7e7, #2cb3f1);
+  background-size: 100%;
+  filter: blur(150px);
+  background-size: 400% 400%;
+  animation: gradient 155s ease infinite;
+  top: -50px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
